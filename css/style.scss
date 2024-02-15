@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-color: #1f242d;
+    --second--bg-color: #323946;
+    --text-color: #ffffff;
+    --main-color: #0ef;
+}
+
+.container {
+    max-width: 1060px;
+    margin: auto;
+    width: 100%;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+
+}
+
+span {
+    color: var(--main-color);
+}
+
+/* Tirar barra lateral do input numérico */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield; 
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+
+/*HEADER*/
+
+.header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header .sticky {
+    border-bottom: .1rem solid rgba(0,0,0, .2);
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 3s ease forwards;
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100);
+    } 
+    50% {
+        opacity: 0,5;
+        transform: translateX(-50);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+}
+
+.toggle {
+    display: flex;
+    margin-top: 1px;
+    cursor: pointer;
+    margin-left: 4rem;
+}
+
+.toggle .toggle-icon {
+    font-size: 2.2rem;
+}
+
+.toggle .toggle-icon:hover {
+    color: var(--main-color);
+}
+
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
